@@ -4,4 +4,4 @@ Vania Adony Ortiz Rivera
 ##Archivo del repertorio*
 * [Ver archivo del programa](Proyecto/Proyecto)
 Para ejecutar el archivo:
-Descargar el archivo y abrirlo en el programa 
+Haz clic en el reglón y debería llevarte a ver el repertorio
