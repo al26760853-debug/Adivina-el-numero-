@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+// Constantes
+const int MAX_INTENTOS = 5;
+
+// Estructuras
+struct Jugador {
+    string nombre;
+    int intento;
+};
+
+// Funciones
+void saludar() {
+    cout << "Bienvenido al juego de adivinar el numero" << endl;
+}
+
+int main() {
+    srand(time(0));
+
+    // Variables
+    Jugador p1;
+    int numeroSecreto = rand() % 100 + 1;
+    int totalIntentos = 0;
+    bool estaListo = true;
+
+    // Arreglos
+    int listaIntentos[MAX_INTENTOS];
+
+    saludar();
+
+    cout << "Escribe tu nombre: ";
+    cin >> p1.nombre;
+
+    // Operadores
+    int intentosRestantes = MAX_INTENTOS - totalIntentos;
+
+    // Condicionales
+    if (estaListo == true && intentosRestantes > 0) {
+        cout << "Hola " << p1.nombre << ", adivina el numero entre 1 y 100" << endl;
+        cout << "Ingresa tu intento: ";
+        cin >> p1.intento;
+
+        listaIntentos[0] = p1.intento;
+        totalIntentos = totalIntentos + 1;
+
+        if (p1.intento == numeroSecreto) {
+            cout << "Adivinaste a la primera!" << endl;
+        } else if (p1.intento > numeroSecreto) {
+            cout << "El numero es menor" << endl;
+        } else {
+            cout << "El numero es mayor" << endl;
+        }
+    }
+
+    return 0;
+}
